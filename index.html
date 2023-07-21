@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum Function with Closures</title>
+</head>
+<body>
+
+<script>
+function createSumFunction() {
+    let sum = 0; 
+    
+    function innerSum(num) {
+        sum += num; 
+        return sum; 
+    }
+    
+    return innerSum; 
+}
+
+const sum = createSumFunction();
+
+console.log(sum(3)); // Output: 3
+console.log(sum(5)); // Output: 8
+console.log(sum(20)); // Output: 28
+</script>
+
+</body>
+</html>
